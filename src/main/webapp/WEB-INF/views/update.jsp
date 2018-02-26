@@ -46,7 +46,6 @@
                         <td valign="middle" align="left">
                             <input type="text" class="inputgri" name="studentID" value="${student.studentID}" />
                             <input type="hidden" class="inputgri" name="number" value="${student.number}" />
-                            ${student.number}
                         </td>
                     </tr>
                     <tr>

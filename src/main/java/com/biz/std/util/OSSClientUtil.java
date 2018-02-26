@@ -97,7 +97,9 @@ public class OSSClientUtil {
                 ossClient.shutdown();
             }
         }
-        studentInformation.setNumber(Integer.valueOf((String)map.get("number")));
+        if (map.get("number")!=null){
+            studentInformation.setNumber(Integer.valueOf((String)map.get("number")));
+        }
         studentInformation.setStudentID(Integer.valueOf((String)(map.get("studentID"))));
         studentInformation.setName((String)map.get("name"));
         studentInformation.setAvg(Double.valueOf((String)(map.get("avg"))));
