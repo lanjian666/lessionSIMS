@@ -24,7 +24,7 @@ public class SelectClassRepositoryTest {
     }
     @Test
     public  void  testSave(){
-        SelectClass selectClass=new SelectClass(2,"数学");
+        SelectClass selectClass=new SelectClass("数学",2,"数学2");
         selectClassRepository.save(selectClass);
     }
     @Test

@@ -28,7 +28,8 @@ public class SubjectController {
         String numberStr=request.getParameter("stuNumber");
         int stuNumber=Integer.valueOf(numberStr);
         String subjectName=request.getParameter("subjectName");
-        SelectClass selectClass=new SelectClass(stuNumber,subjectName);
+        String subjectAndNumber=subjectName+stuNumber;
+        SelectClass selectClass=new SelectClass(subjectName,stuNumber,subjectAndNumber);
         subjectManager.saveSelectClass(selectClass);
         return  "forward:list.do";
     }

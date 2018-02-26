@@ -8,11 +8,27 @@ import javax.persistence.Id;
 public class SelectClass {
     private  String subject;
     private  int stuNumber;
+    private  String subjectAndNumber;
 
-    public SelectClass(int stuNumber,String subject) {
+    public SelectClass(String subject, int stuNumber, String subjectAndNumber) {
+        this.subject = subject;
+        this.stuNumber = stuNumber;
+        this.subjectAndNumber = subjectAndNumber;
+    }
+    @Id
+    public String getSubjectAndNumber() {
+        return subjectAndNumber;
+    }
+
+    public void setSubjectAndNumber(String subjectAndNumber) {
+        this.subjectAndNumber = subjectAndNumber;
+    }
+
+    public SelectClass(int stuNumber, String subject) {
         this.subject = subject;
         this.stuNumber = stuNumber;
     }
+
     public int getStuNumber() {
         return stuNumber;
     }
@@ -23,7 +39,6 @@ public class SelectClass {
 
     public SelectClass() {
     }
-    @Id
     public String getSubject() {
         return subject;
     }

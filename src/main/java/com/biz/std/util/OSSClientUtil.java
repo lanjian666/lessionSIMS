@@ -63,7 +63,6 @@ public class OSSClientUtil {
             // 信息为普通的格式
             if (item.isFormField()) {
                 String fieldName = item.getFieldName();
-                logger.info("转码前文件名"+item.getString());
                 //获取的FileItem执行如下转码方式
                 String value = null;
                 try {
@@ -71,7 +70,6 @@ public class OSSClientUtil {
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
-                logger.info("转码后文件名"+value);
                 map.put(fieldName,value);
             }
 
@@ -99,7 +97,6 @@ public class OSSClientUtil {
                 ossClient.shutdown();
             }
         }
-        System.out.println(Integer.valueOf((String)map.get("number"))+"OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
         studentInformation.setNumber(Integer.valueOf((String)map.get("number")));
         studentInformation.setStudentID(Integer.valueOf((String)(map.get("studentID"))));
         studentInformation.setName((String)map.get("name"));
